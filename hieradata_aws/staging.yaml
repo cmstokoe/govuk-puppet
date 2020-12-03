@@ -1,4 +1,7 @@
 ---
+govuk::apps::collections::feature_flag_accounts: false
+govuk::apps::finder_frontend::feature_flag_accounts: false
+
 app_domain: 'staging.publishing.service.gov.uk'
 app_domain_internal: "staging.govuk-internal.digital"
 
