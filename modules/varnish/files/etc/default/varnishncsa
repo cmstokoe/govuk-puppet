@@ -6,3 +6,4 @@
 #
 # NCSA log format, to be used by HTTP log analyzers
 VARNISHNCSA_ENABLED=1
+varnishncsa -F '{ "@timestamp":"%{%Y-%m-%dT%H:%M:%S%z}t", "@fields":{ "client":"%h", "remote_user":"%u", "x_forwarded_for":"%{X-Forwarded-For}i", "hit_miss":"%{Varnish:hitmiss}x", "bytes":%b, "duration_usec":%D, "status":%s, "request":"%r", "virtualhost":"%{host}i", "method":"%m", "time_first_byte":"%{Varnish:time_firstbyte}x", "handling":"%{Varnish:handling}x", "referrer":"%{Referrer}i", "user_agent":"%{User-agent}i", "govuk_request_id":"%{GOVUK-Request-Id}i" } }'
